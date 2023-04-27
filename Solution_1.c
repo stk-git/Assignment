@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include<limits.h>
+#include <limits.h>
 
 int get_network_quality(int **towers, int num_towers, int radius, int x, int y) {
     int quality = 0;
