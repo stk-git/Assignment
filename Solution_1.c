@@ -8,9 +8,9 @@ int get_network_quality(int **towers, int num_towers, int radius, int x, int y) 
     for (int i = 0; i < num_towers; i++) {
         int dx = x - towers[i][0];
         int dy = y - towers[i][1];
-        int d = sqrt(dx*dx + dy*dy);
-        if (d <= radius) {
-            quality += towers[i][2] / (1 + d);
+        double d = sqrt(dx*dx + dy*dy);
+        if (d < radius) {;
+            quality += floor(towers[i][2] / (1 + d));
         }
     }
     return quality;
@@ -18,8 +18,11 @@ int get_network_quality(int **towers, int num_towers, int radius, int x, int y) 
 
 void get_best_coordinate(int **towers, int num_towers, int radius, int *best_coordinate) {
     int max_quality = INT_MIN;
-    for (int x = -radius; x <= radius; x++) {
-        for (int y = -radius; y <= radius; y++) {
+    for (int i=0;i<num_towers;i++){
+            int initial_x=towers[i][0];
+            int initial_y=towers[i][0];
+            for (int x = -radius+initial_x; x <= initial_x+radius; x++) {
+        for (int y = -radius+initial_y; y <= initial_x+radius; y++) {
             int quality = get_network_quality(towers, num_towers, radius, x, y);
             if (quality > max_quality) {
                 max_quality = quality;
@@ -34,6 +37,7 @@ void get_best_coordinate(int **towers, int num_towers, int radius, int *best_coo
                 }
             }
         }
+            }
     }
 }
 
