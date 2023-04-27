@@ -1,5 +1,3 @@
-Sure, here's a sample README file for a repository that could be used for solving assignments:
-
 # Assignment Solutions
 
 This repository contains solutions to various assignments that were assigned to me. 
