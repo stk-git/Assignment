@@ -51,7 +51,7 @@ int main() {
     {    
         for (int j=0;j<3;j++)    
         {    
-            printf("Enter a[%d][%d]: ",i,j);                
+            printf("Enter tower[%d][%d]: ",i,j);                
             scanf("%d",&towers[i][j]);    
         }    
     }    
