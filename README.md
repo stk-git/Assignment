@@ -1,17 +1,24 @@
-# Assignment
-Hyderabad consists of numerous network towers of various network providers. The metadata
-consisting of the location of the towers is given to you in an array format towers, where towers[i] =
-[xi, yi, qi] denotes the ith network tower with location (xi, yi) and quality factor qi. All the coordinates
-are integral coordinates on the X-Y plane, and the distance between the two coordinates is the
-Euclidean distance.
+Sure, here's a sample README file for a repository that could be used for solving assignments:
 
-You are also given an integer radius where a tower is reachable if the distance is less than or
-equal to radius. Outside that distance, the signal becomes garbled, and the tower is not reachable.
+# Assignment Solutions
 
-The signal quality of the ith tower at a coordinate (x, y) is calculated with the formula ⌊qi / (1 + d)⌋,
-where d is the distance between the tower and the coordinate. The network quality at a coordinate
-is the sum of the signal qualities from all the reachable towers.
+This repository contains solutions to various assignments that were assigned to me. 
 
-Return the array [cx, cy] representing the integral coordinate (cx, cy) where the network quality is
-maximum. If there are multiple coordinates with the same network quality, return the
-lexicographically minimum non-negative coordinate.
+## Table of Contents
+
+- [Assignment 1: Best signal quality](./Solution_1.c)
+
+
+## Requirements
+
+To run the solutions in this repository, you'll need to have the following software installed on your machine:
+
+- any C compiler
+
+## Contributing
+
+I'm not currently accepting contributions to this repository, as it's just for my own personal use. However, feel free to use the solutions in this repository as inspiration for your own assignments!
+
+## License
+
+This repository is licensed under the [MIT License](./LICENSE).
